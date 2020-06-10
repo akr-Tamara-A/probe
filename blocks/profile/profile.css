@@ -1,0 +1,21 @@
+@import url(./__user/profile__user.css);
+@import url(./__container/profile__container.css);
+@import url(./__userpic/profile__userpic.css);
+@import url(./__user-name/profile__user-name.css);
+@import url(./__user-job/profile__user-job.css);
+@import url(./__add-post/profile__add-post.css);
+
+.profile {
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 780px) {
+  .profile {
+    flex-direction: column;
+  }
+}

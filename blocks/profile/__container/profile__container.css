@@ -8,7 +8,7 @@
 
 @media screen and (max-width: 620px) {
   .profile__container {
-    grid-template-rows: max-content 1fr 1fr;
+    grid-template-rows: max-content repeat(2, 1fr);
     grid-template-areas: "userpic userpic userpic"
                          "user user edit"
                          "user user .";

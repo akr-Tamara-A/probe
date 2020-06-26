@@ -1,0 +1,4 @@
+.popup_fade_out {
+  animation: fade .4s ease forwards reverse;
+}
+

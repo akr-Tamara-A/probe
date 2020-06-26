@@ -1,0 +1,15 @@
+.element__image {
+  object-position: center bottom;
+  object-fit: cover;
+  transition: transform .3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.element__image:hover {
+  transform: translate(-50%, -50%) scale(.8, .8);
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Т.Андреева">
+  <title>Сервис Mesto Russia</title>
+</head>
+<body class="page">
+  <div class="page__container">
+    
+    <header class="header page__header page__section">
+      <a href="#" class="header__logo-link">
+        <img src="./images/logo.svg" alt="" class="logo header__logo">
+      </a>
+      <h1 class="header__title">Сервис Mesto Russia</h1>
+    </header>
+
+    <main class="content page__content">
+                                                     <!-- Profile -->
+      <div class="profile page__section">
+        <div class="profile__container">
+          <img src="./images/userpic.jpg" alt="Аватар автора" class="profile__userpic">
+          <div class="profile__user">
+            <h2 class="profile__user-name">Жак-Ив Кусто</h2>
+            <p class="profile__user-job">Исследователь океана</p>
+          </div>
+          <button type="button" class="button button_type_edit-profile button_style_primary"></button>
+          </div>
+        <div class="profile__add-post">
+          <button type="button" class="button button_type_add-foto button_style_primary"></button>
+        </div>
+      </div>
+                                               <!-- Elements container -->
+      <section class="elements page__section">
+        <ul class="elements__container">
+          <li class="elements__item element element__empty">
+            <p class="element__text">Добавьте фотографию</p>
+          </li>
+          
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="footer page__footer page__section">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+    </footer>
+                                               <!-- Template of element card -->
+    <template id="elementTemplate">
+      <li class="elements__item element">
+        <figure class="element__wrapper">
+          <div class="element__head">
+            <img class="element__image">
+          </div>
+          <figcaption class="element__figcaption">
+            <h3 class="element__title"></h3>
+            <button type="button" class="button button_type_no-like element__like button_style_secondary"></button>
+          </figcaption>
+        </figure>
+        <button type="button" class="element__delete button button_type_delete button_style_secondary"></button>
+      </li>
+    </template>
+                                              <!-- Popup 'Edit profile' -->
+    <div id="popupEditProfile" class="popup popup_style_form">
+      <div class="popup__container">
+        <button 
+              name="editProfileClose" 
+              type="button" 
+              title="Закрыть окно" 
+              class="popup__close">
+        </button>
+        <form 
+              name="editProfile" 
+              class="popup__form">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <input 
+                name="editProfileUserName" 
+                type="text" 
+                placeholder="Имя пользователя" 
+                class="popup__input popup__input_type_username">
+          <input 
+                name="editProfileUserJob" 
+                type="text" 
+                placeholder="О себе" 
+                class="popup__input popup__input_type_about">
+          <input 
+                name="editProfileSubmit" 
+                type="submit" 
+                value="Сохранить" 
+                class="popup__submit">
+        </form>
+      </div>
+    </div>
+                                              <!-- Popup 'Add foto' -->
+    <div id="popupAddFoto" class="popup popup_style_form">
+      <div class="popup__container">
+        <button 
+              name="addFotoClose" 
+              type="button" 
+              title="Закрыть окно" 
+              class="popup__close">
+        </button>
+        <form 
+              name="addFoto" class="popup__form">
+          <h2 class="popup__title">Новое место</h2>
+          <input 
+                name="addFotoFotoTitle" 
+                type="text" 
+                placeholder="Название" 
+                class="popup__input popup__input_type_foto-title">
+          <input 
+                name="addFotoFotoLink" 
+                type="text" 
+                placeholder="Ссылка на картинку" 
+                class="popup__input popup__input_type_foto-link">
+          <input 
+                name="addFotoSubmit" 
+                type="submit" 
+                value="Сохранить" 
+                class="popup__submit">
+        </form>
+      </div>
+    </div>
+                                              <!-- Popup 'View full foto' -->
+    <div id="popupViewFoto" class="popup popup_style_view">
+      <div class="popup__container">
+        <button 
+              name="viewFotoClose" 
+              type="button" 
+              title="Закрыть окно" 
+              class="popup__close">
+        </button>
+        <div name="viewFoto" class="popup__view">
+          <img src="" alt="" class="popup__foto">
+          <h5 class="popup__foto-title"></h5>
+        </div>
+      </div>
+    </div>
+  </div>  
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
